@@ -80,7 +80,7 @@ async function finish_luajit_install(src, dst, luajit) {
 }
 
 async function install_luajit(luaInstallPath, luaVersion) {
-  const luajitVersion = luaVersion.substr("luajit-".length)
+  const luajitVersion = luaVersion.slice("luajit-".length)
 
   let repo = LUAJIT_REPOS[luaVersion];
   if (!repo) {
