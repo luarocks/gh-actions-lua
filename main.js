@@ -1,15 +1,14 @@
 
-const core = require("@actions/core")
-const exec = require("@actions/exec")
-const io = require("@actions/io")
-const tc = require("@actions/tool-cache")
-const ch = require("@actions/cache")
-const fsp = require("fs").promises
+import * as core from "@actions/core"
+import * as exec from "@actions/exec"
+import * as io from "@actions/io"
+import * as tc from "@actions/tool-cache"
+import * as ch from "@actions/cache"
+import { promises as fsp } from "fs"
+import path from "path"
 
 const notice = (msg) => core.notice(`gh-actions-lua: ${msg}`)
 const warning = (msg) => core.warning(`gh-actions-lua: ${msg}`)
-
-const path = require("path")
 
 const BUILD_PREFIX = ".lua-build" // this is a temporary folder where lua will be built
 const LUA_PREFIX = ".lua" // this is where Lua will be installed
