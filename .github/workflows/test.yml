@@ -30,7 +30,7 @@ jobs:
     steps:
     - uses: actions/checkout@main
 
-    - uses: ilammy/msvc-dev-cmd@v1
+    - uses: step-security/msvc-dev-cmd@v1
 
     - name: Build Lua
       uses: './'
@@ -64,7 +64,7 @@ jobs:
     steps:
     - uses: actions/checkout@main
 
-    - uses: ilammy/msvc-dev-cmd@v1
+    - uses: step-security/msvc-dev-cmd@v1
 
     - name: Get Lua from cache
       uses: './'
