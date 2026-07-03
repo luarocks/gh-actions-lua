@@ -102,7 +102,7 @@ Example value:
 ## Full Example
 
 This example is for running tests on a Lua module that uses LuaRocks for
-dependencies and [busted](https://olivinelabs.com/busted/) for a test suite.
+dependencies and [busted](https://github.com/lunarmodules/busted) for a test suite.
 
 Create `.github/workflows/test.yml` in your repository:
 
