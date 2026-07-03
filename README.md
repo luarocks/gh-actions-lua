@@ -22,13 +22,13 @@ Other Lua GitHub actions:
 Install Lua: (Will typically default to the latest release, 5.5.0 as of this readme)
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v11
+- uses: luarocks/gh-actions-lua@v12
 ```
 
 Install specific version of Lua:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v11
+- uses: luarocks/gh-actions-lua@v12
   with:
     luaVersion: "5.1.5"
 ```
@@ -36,7 +36,7 @@ Install specific version of Lua:
 Install specific version of LuaJIT:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v11
+- uses: luarocks/gh-actions-lua@v12
   with:
     luaVersion: "luajit-2.1.0-beta3"
 ```
@@ -91,7 +91,7 @@ Additional flags to pass to `make` when building Lua.
 Example value:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v11
+- uses: luarocks/gh-actions-lua@v12
   with:
     luaVersion: 5.3
     luaCompileFlags: LUA_CFLAGS="-DLUA_INT_TYPE=LUA_INT_INT"
@@ -118,11 +118,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - uses: luarocks/gh-actions-lua@v11
+    - uses: luarocks/gh-actions-lua@v12
       with:
         luaVersion: "5.1.5"
 
-    - uses: luarocks/gh-actions-luarocks@v6
+    - uses: luarocks/gh-actions-luarocks@v7
 
     - name: build
       run: |
@@ -155,7 +155,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - uses: luarocks/gh-actions-lua@v11
+    - uses: luarocks/gh-actions-lua@v12
       with:
         luaVersion: ${{ matrix.luaVersion }}
 
