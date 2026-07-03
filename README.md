@@ -42,11 +42,11 @@ Install specific version of LuaJIT:
 ```
 
 When using Windows the following prerequisite action must be run before
-building Lua: [`ilammy/msvc-dev-cmd@v1`](https://github.com/ilammy/msvc-dev-cmd). It is safe to
+building Lua: [`step-security/msvc-dev-cmd@v1`](https://github.com/step-security/msvc-dev-cmd). It is safe to
 include this line on non-Windows platforms, as the action will do nothing in those cases.
 
 ```yaml
-- uses: ilammy/msvc-dev-cmd@v1
+- uses: step-security/msvc-dev-cmd@v1
 - uses: luarocks/gh-actions-lua@v11
 ```
 
