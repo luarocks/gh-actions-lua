@@ -116,7 +116,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - uses: luarocks/gh-actions-lua@v12
       with:
@@ -154,7 +154,7 @@ jobs:
         luaVersion: ["5.1.5", "5.2.4", "luajit-2.1.0-beta3"]
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - uses: luarocks/gh-actions-lua@v12
       with:
         luaVersion: ${{ matrix.luaVersion }}
