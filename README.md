@@ -19,7 +19,7 @@ Other Lua GitHub actions:
 
 ## Usage
 
-Install Lua: (Will typically default to the latest release, 5.4.8 as of this readme)
+Install Lua: (Will typically default to the latest release, 5.5.0 as of this readme)
 
 ```yaml
 - uses: luarocks/gh-actions-lua@v11
@@ -54,7 +54,7 @@ include this line on non-Windows platforms, as the action will do nothing in tho
 
 ### `luaVersion`
 
-**Default**: `"5.4"`
+**Default**: `"5.5"`
 
 Specifies the version of Lua to install. The version name instructs the action
 where to download the source from.
@@ -65,6 +65,7 @@ Examples of versions:
 * `"5.2.4"`
 * `"5.3.5"`
 * `"5.4.1"`
+* `"5.5.0"`
 * `"luajit-2.0"`
 * `"luajit-2.1"`
 * `"luajit-master"`
@@ -78,7 +79,7 @@ The version specifies where the source is downloaded from:
 
 **Version aliases**
 
-You can use shorthand `5.1`, `5.2`, `5.3`, `5.4`, `luajit` version aliases to point to the
+You can use shorthand `5.1`, `5.2`, `5.3`, `5.4`, `5.5`, `luajit` version aliases to point to the
 latest (or recent) version of Lua for that version.
 
 ### `luaCompileFlags`
