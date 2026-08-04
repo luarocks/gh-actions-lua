@@ -19,16 +19,16 @@ Other Lua GitHub actions:
 
 ## Usage
 
-Install Lua: (Will typically default to the latest release, 5.5.0 as of this readme)
+Install Lua: (Will typically default to the latest release, `5.5.1` as of this readme)
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v12
+- uses: luarocks/gh-actions-lua@v13
 ```
 
 Install specific version of Lua:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v12
+- uses: luarocks/gh-actions-lua@v13
   with:
     luaVersion: "5.1.5"
 ```
@@ -36,9 +36,9 @@ Install specific version of Lua:
 Install specific version of LuaJIT:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v12
+- uses: luarocks/gh-actions-lua@v13
   with:
-    luaVersion: "luajit-2.1.0-beta3"
+    luaVersion: "luajit-2.0"
 ```
 
 When using Windows the following prerequisite action must be run before
@@ -47,7 +47,7 @@ include this line on non-Windows platforms, as the action will do nothing in tho
 
 ```yaml
 - uses: step-security/msvc-dev-cmd@v1
-- uses: luarocks/gh-actions-lua@v11
+- uses: luarocks/gh-actions-lua@v13
 ```
 
 ## Inputs
@@ -91,7 +91,7 @@ Additional flags to pass to `make` when building Lua.
 Example value:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v12
+- uses: luarocks/gh-actions-lua@v13
   with:
     luaVersion: 5.3
     luaCompileFlags: LUA_CFLAGS="-DLUA_INT_TYPE=LUA_INT_INT"
@@ -118,7 +118,7 @@ jobs:
     steps:
     - uses: actions/checkout@v7
 
-    - uses: luarocks/gh-actions-lua@v12
+    - uses: luarocks/gh-actions-lua@v13
       with:
         luaVersion: "5.1.5"
 
@@ -136,7 +136,7 @@ jobs:
 
 This example:
 
-* Uses Lua 5.1.5 — You can use another version by chaning the `luaVersion` varible. LuaJIT versions can be used by prefixing the version with `luajit-`, i.e. `luajit-2.1.0-beta3`
+* Uses Lua 5.1.5 — You can use another version by chaning the `luaVersion` varible. LuaJIT versions from known branches (`master`, `v2.1` or `v2.0`) can be used by prefixing the version with `luajit-`, i.e. `luajit-2.0`
 * Uses a `.rockspec` file the root directory of your repository to install dependencies and test packaging the module via `luarocks make`
 
 
@@ -151,11 +151,11 @@ jobs:
   test:
     strategy:
       matrix:
-        luaVersion: ["5.1.5", "5.2.4", "luajit-2.1.0-beta3"]
+        luaVersion: ["5.1.5", "5.2.4", "luajit"]
 
     steps:
     - uses: actions/checkout@v7
-    - uses: luarocks/gh-actions-lua@v12
+    - uses: luarocks/gh-actions-lua@v13
       with:
         luaVersion: ${{ matrix.luaVersion }}
 
