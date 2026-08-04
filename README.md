@@ -136,7 +136,7 @@ jobs:
 
 This example:
 
-* Uses Lua 5.1.5 — You can use another version by chaning the `luaVersion` varible. LuaJIT versions from known branches (`master`, `v2.1` or `v2.0`) can be used by prefixing the version with `luajit-`, i.e. `luajit-2.0`
+* Uses Lua 5.1.5 — You can use another version by changing the `luaVersion` variable. LuaJIT versions from known branches (`master`, `v2.1` or `v2.0`) can be used by prefixing the version with `luajit-`, i.e. `luajit-2.0`
 * Uses a `.rockspec` file the root directory of your repository to install dependencies and test packaging the module via `luarocks make`
 
 
