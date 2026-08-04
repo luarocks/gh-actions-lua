@@ -33,11 +33,6 @@ const LUAJIT_REPOS = {
     "branch": "v2.1",
     "binary": "luajit"
   },
-  "luajit-2.1.0-beta3": {
-    "url": "https://github.com/luajit/luajit.git",
-    "branch": "v2.1.0-beta3",
-    "binary": "luajit-2.1.0-beta3"
-  },
   "luajit-master": {
     "url": "https://github.com/luajit/luajit.git",
     "branch": "master",
