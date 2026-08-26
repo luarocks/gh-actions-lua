@@ -22,13 +22,13 @@ Other Lua GitHub actions:
 Install Lua: (Will typically default to the latest release, `5.5.1` as of this readme)
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v13
+- uses: luarocks/gh-actions-lua@v14
 ```
 
 Install specific version of Lua:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v13
+- uses: luarocks/gh-actions-lua@v14
   with:
     luaVersion: "5.1.5"
 ```
@@ -36,7 +36,7 @@ Install specific version of Lua:
 Install specific version of LuaJIT:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v13
+- uses: luarocks/gh-actions-lua@v14
   with:
     luaVersion: "luajit-2.0"
 ```
@@ -47,7 +47,7 @@ include this line on non-Windows platforms, as the action will do nothing in tho
 
 ```yaml
 - uses: step-security/msvc-dev-cmd@v1
-- uses: luarocks/gh-actions-lua@v13
+- uses: luarocks/gh-actions-lua@v14
 ```
 
 ## Inputs
@@ -91,7 +91,7 @@ Additional flags to pass to `make` when building Lua.
 Example value:
 
 ```yaml
-- uses: luarocks/gh-actions-lua@v13
+- uses: luarocks/gh-actions-lua@v14
   with:
     luaVersion: 5.3
     luaCompileFlags: LUA_CFLAGS="-DLUA_INT_TYPE=LUA_INT_INT"
@@ -118,7 +118,7 @@ jobs:
     steps:
     - uses: actions/checkout@v7
 
-    - uses: luarocks/gh-actions-lua@v13
+    - uses: luarocks/gh-actions-lua@v14
       with:
         luaVersion: "5.1.5"
 
@@ -155,7 +155,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v7
-    - uses: luarocks/gh-actions-lua@v13
+    - uses: luarocks/gh-actions-lua@v14
       with:
         luaVersion: ${{ matrix.luaVersion }}
 
